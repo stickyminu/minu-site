@@ -6,11 +6,11 @@ document.addEventListener("DOMContentLoaded", async () => {
     if (window.ronin) {
         loginButton.addEventListener("click", async () => {
             try {
-                // Request connection to Ronin Wallet
-                const accounts = await window.ronin.request({ method: "eth_requestAccounts" });
+                // Request connection to Ronin Wallet using send() instead of request()
+                const response = await window.ronin.send("eth_requestAccounts");
 
-                if (accounts.length > 0) {
-                    walletAddressDisplay.innerText = `Connected: ${accounts[0]}`;
+                if (response.result && response.result.length > 0) {
+                    walletAddressDisplay.innerText = `Connected: ${response.result[0]}`;
                 } else {
                     walletAddressDisplay.innerText = "Connection failed.";
                 }

@@ -3,14 +3,14 @@ document.addEventListener("DOMContentLoaded", async () => {
     const walletAddressDisplay = document.getElementById("walletAddress");
 
     // Check if Ronin Wallet is installed
-    if (window.ronin) {
+    if (window.ronin && window.ronin.provider) {
         loginButton.addEventListener("click", async () => {
             try {
-                // Request connection to Ronin Wallet using send() instead of request()
-                const response = await window.ronin.send("eth_requestAccounts");
+                // Request Ronin Wallet connection
+                const accounts = await window.ronin.provider.request({ method: "eth_requestAccounts" });
 
-                if (response.result && response.result.length > 0) {
-                    walletAddressDisplay.innerText = `Connected: ${response.result[0]}`;
+                if (accounts.length > 0) {
+                    walletAddressDisplay.innerText = `Connected: ${accounts[0]}`;
                 } else {
                     walletAddressDisplay.innerText = "Connection failed.";
                 }

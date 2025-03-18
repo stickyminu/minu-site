@@ -9,12 +9,23 @@
     let selectedPieces = [];
     let aiSelectedPieces = [];
 
+    // Function to reset game
+    function resetGame() {
+        selectedPieces = [];
+        aiSelectedPieces = [];
+        playerBoxes.forEach(box => box.textContent = ""); // Clear player selections
+        aiBoxes.forEach(box => box.textContent = "?"); // Reset AI display
+        resultText.textContent = ""; // Clear result
+        submitButton.style.display = "block"; // Show Submit button
+        playAgainButton.style.display = "none"; // Hide Play Again button
+    }
+
     // Ensure player selects in order
     playerBoxes.forEach((box, index) => {
         box.addEventListener("click", () => {
             if (selectedPieces.length < 4 && !box.textContent) {
                 box.textContent = pieces[selectedPieces.length]; // Assign based on order
-                selectedPieces.push(pieces[selectedPieces.length]); // Store selection
+                selectedPieces.push(pieces[selectedPieces.length - 1]); // Store selection
             }
         });
     });
@@ -60,13 +71,5 @@
         playAgainButton.style.display = "block";
     });
 
-    playAgainButton.addEventListener("click", () => {
-        selectedPieces = [];
-        aiSelectedPieces = [];
-        playerBoxes.forEach(box => box.textContent = "");
-        aiBoxes.forEach(box => box.textContent = "?");
-        resultText.textContent = "";
-        submitButton.style.display = "block";
-        playAgainButton.style.display = "none";
-    });
+    playAgainButton.addEventListener("click", resetGame);
 });

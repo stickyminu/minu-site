@@ -1,12 +1,7 @@
 ﻿document.addEventListener("DOMContentLoaded", async () => {
     const loginButton = document.getElementById("loginButton");
-    const mintButton = document.createElement("button");
+    const mintButton = document.getElementById("mintButton"); // Now correctly referencing the mint button
     const walletInfoDisplay = document.getElementById("walletInfo");
-
-    mintButton.id = "mintButton";
-    mintButton.innerText = "Mint NFT";
-    mintButton.style.display = "none";
-    document.body.appendChild(mintButton);
 
     const nftContractAddress = "0xC98f378f5DbF90afAD07b24Ef48443231A1df43c";
     const saigonRPC = "https://saigon-testnet.roninchain.com/rpc";

@@ -1,91 +1,72 @@
-document.addEventListener("DOMContentLoaded", () => {
-    const playerBoard = document.getElementById("playerBoard");
-    const aiBoard = document.getElementById("aiBoard");
+﻿document.addEventListener("DOMContentLoaded", () => {
+    const playerBoxes = document.querySelectorAll("#playerBoard .box");
+    const aiBoxes = document.querySelectorAll("#aiBoard .box");
     const submitButton = document.getElementById("submit");
     const playAgainButton = document.getElementById("playAgainButton");
-    const resultDisplay = document.getElementById("result");
+    const resultText = document.getElementById("result");
 
     const pieces = ["Admiral", "Intelligence", "Confidant", "Genome"];
-    let playerSelection = [];
-    let aiSelection = [];
+    let selectedPieces = [];
+    let aiSelectedPieces = [];
 
-    function resetGame() {
-        playerSelection = [];
-        aiSelection = [];
-        resultDisplay.textContent = "";
-
-        playerBoard.querySelectorAll(".box").forEach((box) => {
-            box.textContent = "";
-        });
-
-        aiBoard.querySelectorAll(".box").forEach((box) => {
-            box.textContent = "?";
-        });
-
-        submitButton.style.display = "block";
-        playAgainButton.style.display = "none";
-        randomizeAI();
-    }
-
-    function randomizeAI() {
-        aiSelection = [...pieces].sort(() => Math.random() - 0.5);
-        aiBoard.querySelectorAll(".box").forEach((box) => {
-            box.textContent = "?";
-        });
-    }
-
-    function determineWinner() {
-        let playerWins = 0, aiWins = 0;
-        for (let i = 0; i < 4; i++) {
-            let playerPiece = playerSelection[i];
-            let aiPiece = aiSelection[i];
-
-            if (
-                (playerPiece === "Admiral" && (aiPiece === "Confidant" || aiPiece === "Genome")) ||
-                (playerPiece === "Intelligence" && aiPiece === "Admiral") ||
-                (playerPiece === "Confidant" && (aiPiece === "Intelligence" || aiPiece === "Genome")) ||
-                (playerPiece === "Genome" && aiPiece === "Genome")
-            ) {
-                playerWins++;
-            } else if (playerPiece !== aiPiece) {
-                aiWins++;
-            }
-        }
-
-        if (playerWins > aiWins) {
-            resultDisplay.textContent = "You Win!";
-        } else if (aiWins > playerWins) {
-            resultDisplay.textContent = "AI Wins!";
-        } else {
-            resultDisplay.textContent = "It's a Draw!";
-        }
-
-        submitButton.style.display = "none";
-        playAgainButton.style.display = "block";
-    }
-
-    playerBoard.querySelectorAll(".box").forEach((box, index) => {
+    // Ensure player selects in order
+    playerBoxes.forEach((box, index) => {
         box.addEventListener("click", () => {
-            box.textContent = pieces[index];
-            playerSelection[index] = pieces[index];
+            if (selectedPieces.length < 4 && !box.textContent) {
+                box.textContent = pieces[selectedPieces.length]; // Assign based on order
+                selectedPieces.push(pieces[selectedPieces.length]); // Store selection
+            }
         });
     });
 
     submitButton.addEventListener("click", () => {
-        if (playerSelection.length < 4) {
-            resultDisplay.textContent = "Arrange all pieces first!";
+        if (selectedPieces.length < 4) {
+            resultText.textContent = "Please select all four pieces before submitting!";
             return;
         }
-        randomizeAI();
-        setTimeout(() => {
-            aiBoard.querySelectorAll(".box").forEach((box, index) => {
-                box.textContent = aiSelection[index];
-            });
-            determineWinner();
-        }, 2000);
+
+        // Randomly assign AI pieces
+        aiSelectedPieces = pieces.sort(() => Math.random() - 0.5);
+        aiBoxes.forEach((box, index) => {
+            box.textContent = aiSelectedPieces[index];
+        });
+
+        // Determine the winner
+        let playerScore = 0;
+        let aiScore = 0;
+
+        for (let i = 0; i < 4; i++) {
+            if (
+                (selectedPieces[i] === "Admiral" && (aiSelectedPieces[i] === "Confidant" || aiSelectedPieces[i] === "Genome")) ||
+                (selectedPieces[i] === "Intelligence" && aiSelectedPieces[i] === "Admiral") ||
+                (selectedPieces[i] === "Confidant" && (aiSelectedPieces[i] === "Intelligence" || aiSelectedPieces[i] === "Genome")) ||
+                (selectedPieces[i] === "Genome" && aiSelectedPieces[i] === "Genome")
+            ) {
+                playerScore++;
+            } else if (selectedPieces[i] !== aiSelectedPieces[i]) {
+                aiScore++;
+            }
+        }
+
+        if (playerScore > aiScore) {
+            resultText.textContent = "You Win! 🎉";
+        } else if (playerScore < aiScore) {
+            resultText.textContent = "AI Wins! 🤖";
+        } else {
+            resultText.textContent = "It's a Draw! ⚖️";
+        }
+
+        submitButton.style.display = "none";
+        playAgainButton.style.display = "block";
     });
 
-    playAgainButton.addEventListener("click", resetGame);
-
-    randomizeAI();
+    playAgainButton.addEventListener("click", () => {
+        selectedPieces = [];
+        aiSelectedPieces = [];
+        playerBoxes.forEach(box => box.textContent = "");
+        aiBoxes.forEach(box => box.textContent = "?");
+        resultText.textContent = "";
+        submitButton.style.display = "block";
+        playAgainButton.style.display = "none";
+    });
 });

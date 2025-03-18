@@ -13,19 +13,23 @@
     function resetGame() {
         selectedPieces = [];
         aiSelectedPieces = [];
-        playerBoxes.forEach(box => box.textContent = ""); // Clear player selections
+
+        // Clear player selections
+        playerBoxes.forEach(box => box.textContent = "");
         aiBoxes.forEach(box => box.textContent = "?"); // Reset AI display
+
         resultText.textContent = ""; // Clear result
         submitButton.style.display = "block"; // Show Submit button
         playAgainButton.style.display = "none"; // Hide Play Again button
     }
 
     // Ensure player selects in order
-    playerBoxes.forEach((box, index) => {
+    playerBoxes.forEach((box) => {
         box.addEventListener("click", () => {
             if (selectedPieces.length < 4 && !box.textContent) {
-                box.textContent = pieces[selectedPieces.length]; // Assign based on order
-                selectedPieces.push(pieces[selectedPieces.length - 1]); // Store selection
+                let nextPiece = pieces[selectedPieces.length]; // Get the next piece in order
+                box.textContent = nextPiece; // Set the text in the box
+                selectedPieces.push(nextPiece); // Add to the selected pieces array
             }
         });
     });

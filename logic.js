@@ -2,15 +2,34 @@ document.addEventListener("DOMContentLoaded", () => {
     const playerBoard = document.getElementById("playerBoard");
     const aiBoard = document.getElementById("aiBoard");
     const submitButton = document.getElementById("submit");
+    const playAgainButton = document.getElementById("playAgainButton");
     const resultDisplay = document.getElementById("result");
 
     const pieces = ["Admiral", "Intelligence", "Confidant", "Genome"];
     let playerSelection = [];
     let aiSelection = [];
 
+    function resetGame() {
+        playerSelection = [];
+        aiSelection = [];
+        resultDisplay.textContent = "";
+
+        playerBoard.querySelectorAll(".box").forEach((box) => {
+            box.textContent = "";
+        });
+
+        aiBoard.querySelectorAll(".box").forEach((box) => {
+            box.textContent = "?";
+        });
+
+        submitButton.style.display = "block";
+        playAgainButton.style.display = "none";
+        randomizeAI();
+    }
+
     function randomizeAI() {
         aiSelection = [...pieces].sort(() => Math.random() - 0.5);
-        aiBoard.querySelectorAll(".box").forEach((box, index) => {
+        aiBoard.querySelectorAll(".box").forEach((box) => {
             box.textContent = "?";
         });
     }
@@ -40,6 +59,9 @@ document.addEventListener("DOMContentLoaded", () => {
         } else {
             resultDisplay.textContent = "It's a Draw!";
         }
+
+        submitButton.style.display = "none";
+        playAgainButton.style.display = "block";
     }
 
     playerBoard.querySelectorAll(".box").forEach((box, index) => {
@@ -62,6 +84,8 @@ document.addEventListener("DOMContentLoaded", () => {
             determineWinner();
         }, 2000);
     });
+
+    playAgainButton.addEventListener("click", resetGame);
 
     randomizeAI();
 });

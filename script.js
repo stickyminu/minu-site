@@ -9,7 +9,6 @@
     document.body.appendChild(mintButton); // Append to the page
 
     // Ronin Wallet & Contract Info
-    const minuTokenAddress = "0xfa4384cbac92141bc47b8600db5f3805a33645d2"; // $MINU contract
     const nftContractAddress = "0xC98f378f5DbF90afAD07b24Ef48443231A1df43c"; // NFT contract
     const saigonRPC = "https://saigon-testnet.roninchain.com/rpc";
 
@@ -42,7 +41,8 @@
                         <p>💰 Testnet RON Balance: <strong>${balanceSaigonRON} tRON</strong></p>
                     `;
 
-                    // Show mint button
+                    // Hide login button and show mint button
+                    loginButton.style.display = "none";
                     mintButton.style.display = "block";
                 } else {
                     walletInfoDisplay.innerText = "Connection failed.";

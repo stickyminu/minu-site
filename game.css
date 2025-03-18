@@ -48,11 +48,17 @@ body {
     padding: 20px;
 }
 
+.boards {
+    display: flex;
+    flex-direction: column-reverse; /* This ensures AI's board appears above */
+    align-items: center;
+    gap: 20px;
+}
+
 .board {
     display: grid;
     grid-template-columns: repeat(4, 100px);
     grid-gap: 10px;
-    margin-top: 20px;
 }
 
 .box {

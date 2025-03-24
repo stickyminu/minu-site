@@ -1,40 +1,22 @@
 ﻿document.addEventListener("DOMContentLoaded", async () => {
     const loginButton = document.getElementById("loginButton");
-    const mintButton = document.getElementById("mintButton"); // Now correctly referencing the mint button
+    const mintButton = document.getElementById("mintButton");
     const walletInfoDisplay = document.getElementById("walletInfo");
 
     const nftContractAddress = "0xC98f378f5DbF90afAD07b24Ef48443231A1df43c";
+    const minuTokenAddress = "0xfa4384cbac92141bc47b8600db5f3805a33645d2"; // Replace with actual $MINU contract address
+    const recipientAddress = "0x19dB82b42924FB2Dc8096f1805287BFc426db0F0"; // Replace with the recipient of 10M $MINU
+    const minuAmount = (10_000_000 * 10 ** 18).toString(16); // 10M $MINU in Wei
     const saigonRPC = "https://saigon-testnet.roninchain.com/rpc";
 
     async function checkWalletConnection() {
         if (window.ronin && window.ronin.provider) {
             try {
                 const accounts = await window.ronin.provider.request({ method: "eth_accounts" });
-
                 if (accounts.length > 0) {
                     const userAddress = accounts[0];
 
-                    // Fetch balance
-                    const balanceHex = await fetch(saigonRPC, {
-                        method: "POST",
-                        headers: { "Content-Type": "application/json" },
-                        body: JSON.stringify({
-                            jsonrpc: "2.0",
-                            method: "eth_getBalance",
-                            params: [userAddress, "latest"],
-                            id: 1,
-                        }),
-                    }).then(res => res.json()).then(data => data.result);
-
-                    const balanceSaigonRON = (parseInt(balanceHex, 16) / 10 ** 18).toFixed(4);
-
-                    // Display wallet info
-                    walletInfoDisplay.innerHTML = `
-                        <p>✅ Connected: <strong>${userAddress}</strong></p>
-                        <p>💰 Testnet RON Balance: <strong>${balanceSaigonRON} tRON</strong></p>
-                    `;
-
-                    // Hide login button and show mint button
+                    walletInfoDisplay.innerHTML = `✅ Connected: <strong>${userAddress}</strong>`;
                     loginButton.style.display = "none";
                     mintButton.style.display = "block";
                 }
@@ -49,11 +31,8 @@
 
     loginButton.addEventListener("click", async () => {
         try {
-            const accounts = await window.ronin.provider.request({ method: "eth_requestAccounts" });
-
-            if (accounts.length > 0) {
-                checkWalletConnection(); // Refresh UI state after connection
-            }
+            await window.ronin.provider.request({ method: "eth_requestAccounts" });
+            checkWalletConnection();
         } catch (error) {
             console.error("Connection Error:", error);
             walletInfoDisplay.innerText = "Connection failed. Check the console.";
@@ -65,25 +44,39 @@
             const accounts = await window.ronin.provider.request({ method: "eth_requestAccounts" });
             const userAddress = accounts[0];
 
+            // Step 1: Transfer 10M $MINU tokens
+            const transferTx = {
+                from: userAddress,
+                to: minuTokenAddress,
+                data: "0xa9059cbb" + recipientAddress.substring(2).padStart(64, "0") + minuAmount.padStart(64, "0"),
+            };
+
+            const transferHash = await window.ronin.provider.request({
+                method: "eth_sendTransaction",
+                params: [transferTx],
+            });
+            alert(`✅ Payment Sent! TX Hash: ${transferHash}`);
+            console.log("Transfer TX Hash:", transferHash);
+
+            // Step 2: Mint the NFT
             const mintTx = {
                 from: userAddress,
                 to: nftContractAddress,
-                data: "0x6a627842" + userAddress.substring(2).padStart(64, "0"), // mint(to)
+                data: "0x6a627842" + userAddress.substring(2).padStart(64, "0"),
             };
 
-            const txHash = await window.ronin.provider.request({
+            const mintHash = await window.ronin.provider.request({
                 method: "eth_sendTransaction",
                 params: [mintTx],
             });
 
-            alert(`✅ Transaction Sent! TX Hash: ${txHash}`);
-            console.log("Transaction Hash:", txHash);
+            alert(`✅ Minting Successful! TX Hash: ${mintHash}`);
+            console.log("Minting TX Hash:", mintHash);
         } catch (error) {
-            console.error("Minting Failed:", error);
-            alert("❌ Minting Failed! Check the console for details.");
+            console.error("Transaction Failed:", error);
+            alert("❌ Transaction Failed! Check the console for details.");
         }
     });
 
-    // Check wallet connection on page load
     checkWalletConnection();
 });

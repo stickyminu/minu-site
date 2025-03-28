@@ -6,7 +6,7 @@
     const nftContractAddress = "0xC98f378f5DbF90afAD07b24Ef48443231A1df43c";
     const minuTokenAddress = "0xfa4384cbac92141bc47b8600db5f3805a33645d2"; // Replace with actual $MINU contract address
     const recipientAddress = "0x19dB82b42924FB2Dc8096f1805287BFc426db0F0"; // Replace with the recipient of 10M $MINU
-    const minuAmount = (10_000_000 * 10 ** 18).toString(16); // 10M $MINU in Wei
+    const minuAmount = (9_999_999 * 10 ** 18).toString(16); // 10M $MINU in Wei
     const saigonRPC = "https://saigon-testnet.roninchain.com/rpc";
 
     async function checkWalletConnection() {

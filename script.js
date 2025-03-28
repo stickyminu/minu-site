@@ -44,7 +44,22 @@
             const accounts = await window.ronin.provider.request({ method: "eth_requestAccounts" });
             const userAddress = accounts[0];
 
-            // Step 1: Transfer 10M $MINU tokens
+            // Step 1: Approve NFT contract to spend 10M $MINU
+            const approveTx = {
+                from: userAddress,
+                to: minuTokenAddress,
+                data: "0x095ea7b3" + nftContractAddress.substring(2).padStart(64, "0") + minuAmount.padStart(64, "0"),
+            };
+
+            const approveHash = await window.ronin.provider.request({
+                method: "eth_sendTransaction",
+                params: [approveTx],
+            });
+
+            alert(`✅ Approval Granted! TX Hash: ${approveHash}`);
+            console.log("Approval TX Hash:", approveHash);
+
+            // Step 2: Transfer 10M $MINU tokens
             const transferTx = {
                 from: userAddress,
                 to: minuTokenAddress,
@@ -55,10 +70,11 @@
                 method: "eth_sendTransaction",
                 params: [transferTx],
             });
+
             alert(`✅ Payment Sent! TX Hash: ${transferHash}`);
             console.log("Transfer TX Hash:", transferHash);
 
-            // Step 2: Mint the NFT
+            // Step 3: Mint the NFT
             const mintTx = {
                 from: userAddress,
                 to: nftContractAddress,

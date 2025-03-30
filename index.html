@@ -3,40 +3,42 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mint Your NFT</title>
+    <title>Mochi Inu Admirals - Mint</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-
     <!-- Navigation Bar -->
     <nav>
         <ul>
-            <li><a href="index.html" class="active">Home</a></li>
-            <li><a href="game.html">Game</a></li>
+            <li><a href="https://mochiinuadmirals.xyz">Home</a></li>
         </ul>
+        <div id="wallet-section">
+            <button id="connectWallet">Connect Wallet</button>
+            <span id="walletInfo" style="display: none;"></span>
+        </div>
     </nav>
 
-    <header>
-        <h1>Mint Your Exclusive NFT</h1>
-    </header>
-
+    <!-- Minting Section -->
     <div class="container">
-        <h2>Connect your Ronin Wallet & Mint Diamond Voucher</h2>
-        <p>Click below to connect your wallet, pay with $MINU, and mint your NFT.</p>
-
-        <button id="loginButton">Login with Ronin Wallet</button>
-        <div id="walletInfo"></div>
-
-        <!-- Pay 10M $MINU -->
-        <button id="payButton" style="display: none;">Pay 10M $MINU</button>
-        <div id="paymentStatus"></div>
-
-        <!-- Mint Button (Hidden by Default) -->
-        <button id="mintButton" style="display: none;">Mint Diamond Voucher</button>
+        <div id="whitelist-status">
+            <p>Checking whitelist status...</p>
+        </div>
+        <div id="allocation" style="display: none;">
+            <p>Congratulations! You have been whitelisted for this Presale.</p>
+            <p>Diamond Voucher: <span id="diamondAmount">0</span></p>
+            <p>Gold Voucher: <span id="goldAmount">0</span></p>
+            <button id="mintDiamond" style="display: none;">Mint Diamond Voucher</button>
+            <button id="mintGold" style="display: none;">Mint Gold Voucher</button>
+        </div>
+        <div id="not-whitelisted" style="display: none;">
+            <p>Welcome! Our whitelisted spots are already allocated.</p>
+            <p>Should there be vouchers left, you can join the FCFS Public Sale tomorrow, April 1, 2025, 6:00 PM GMT+8.</p>
+        </div>
     </div>
 
+    <!-- Footer -->
     <footer>
-        <p>🚀 Powered by Ronin Blockchain | Built with ❤️</p>
+        <p>Mochi Inu Admirals - 2025</p>
     </footer>
 
     <script src="script.js"></script>

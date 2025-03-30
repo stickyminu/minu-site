@@ -544,5 +544,12 @@
     "diamondAmount": 0,
     "goldAmount": 1,
     "source": "Over.ron Raffle"
+  },
+  {
+    "wallet": "0x0632921b0eb918758959238760cF556a8163ab20",
+    "whitelisted": true,
+    "diamondAmount": 2,
+    "goldAmount": 2,
+    "source": "Admin"
   }
 ]

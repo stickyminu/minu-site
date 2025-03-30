@@ -1,0 +1,548 @@
+[
+  {
+    "wallet": "0x12C42863d7D2B0e339afDB0B97613116b8FE7318",
+    "whitelisted": true,
+    "diamondAmount": 2,
+    "goldAmount": 1,
+    "source": "OG Supporters and Holders"
+  },
+  {
+    "wallet": "0x34F5b73F1dA091E0003A210fa5a1F758a52c838f",
+    "whitelisted": true,
+    "diamondAmount": 2,
+    "goldAmount": 0,
+    "source": "OG Supporters and Holders"
+  },
+  {
+    "wallet": "0xc0CeC845A4B0b74D7282d8Bf308528a9c5Dc9ed0",
+    "whitelisted": true,
+    "diamondAmount": 1,
+    "goldAmount": 0,
+    "source": "OG Supporters and Holders"
+  },
+  {
+    "wallet": "0xe8354fEd697388D215EfBc49df9639E14761Bb34",
+    "whitelisted": true,
+    "diamondAmount": 2,
+    "goldAmount": 2,
+    "source": "OG Supporters and Holders"
+  },
+  {
+    "wallet": "0x7423c70AAFd922EC64bb77422Fb2E29A3415873B",
+    "whitelisted": true,
+    "diamondAmount": 2,
+    "goldAmount": 2,
+    "source": "OG Supporters and Holders"
+  },
+  {
+    "wallet": "0x0225F21d70607BdBEa19e9DE7Cb0308E606633D0",
+    "whitelisted": true,
+    "diamondAmount": 2,
+    "goldAmount": 2,
+    "source": "OG Supporters and Holders"
+  },
+  {
+    "wallet": "0x0454e70331B1B12288D49b6217395050080F521C",
+    "whitelisted": true,
+    "diamondAmount": 1,
+    "goldAmount": 0,
+    "source": "OG Supporters and Holders"
+  },
+  {
+    "wallet": "0x5b31d17Cf77c7e2473BeE76880629198AB6D0B80",
+    "whitelisted": true,
+    "diamondAmount": 2,
+    "goldAmount": 1,
+    "source": "Mochi Inu Admirals Raffle"
+  },
+  {
+    "wallet": "0xFcF64cb28C4fdE1806f8Cf1b9fb7Eb81B3d476C7",
+    "whitelisted": true,
+    "diamondAmount": 2,
+    "goldAmount": 0,
+    "source": "Mochi Inu Admirals Raffle"
+  },
+  {
+    "wallet": "0xF52b0513F79f50133D3F0329B696e786B22d0EC2",
+    "whitelisted": true,
+    "diamondAmount": 1,
+    "goldAmount": 0,
+    "source": "Mochi Inu Admirals Raffle"
+  },
+  {
+    "wallet": "0x11e57FD27508e2648c16A8DD672cE1bc8AA5eb13",
+    "whitelisted": true,
+    "diamondAmount": 1,
+    "goldAmount": 0,
+    "source": "Mochi Inu Admirals Raffle"
+  },
+  {
+    "wallet": "0xF6f28baF2B9DAdaf77730C94a847620270272176",
+    "whitelisted": true,
+    "diamondAmount": 3,
+    "goldAmount": 1,
+    "source": "Mochi Inu Admirals Raffle"
+  },
+  {
+    "wallet": "0xeB596C238b67B2C91152Ac06fdE52A0c0E7F144F",
+    "whitelisted": true,
+    "diamondAmount": 1,
+    "goldAmount": 0,
+    "source": "Chill Kong Team"
+  },
+  {
+    "wallet": "0x2d60828F637097dd7CEA9BeAf34AD33C10Ee44e1",
+    "whitelisted": true,
+    "diamondAmount": 1,
+    "goldAmount": 0,
+    "source": "Chill Kong Team"
+  },
+  {
+    "wallet": "0x706067004Df1f393DD03bc0a15D12D338EAD8Ba2",
+    "whitelisted": true,
+    "diamondAmount": 1,
+    "goldAmount": 0,
+    "source": "Chill Kong Team"
+  },
+  {
+    "wallet": "0x63Db8dAC02E86cfFE60B7BaA4BC198Cacd2901EB",
+    "whitelisted": true,
+    "diamondAmount": 1,
+    "goldAmount": 0,
+    "source": "Chill Kong Team"
+  },
+  {
+    "wallet": "0x1Ee239d74616C8780D4745963a7dB16CA0620C68",
+    "whitelisted": true,
+    "diamondAmount": 1,
+    "goldAmount": 0,
+    "source": "Chill Kong Team"
+  },
+  {
+    "wallet": "0xcB58791773218CAd1eC96EDcb15192d28F3955bE",
+    "whitelisted": true,
+    "diamondAmount": 1,
+    "goldAmount": 0,
+    "source": "Chill Kong Community"
+  },
+  {
+    "wallet": "0x0435E7b36Cc6D51274a119b8F08521465eEdad63",
+    "whitelisted": true,
+    "diamondAmount": 1,
+    "goldAmount": 0,
+    "source": "Chill Kong Community"
+  },
+  {
+    "wallet": "0x82bdb21155483Cea8D06CEb6934be1f2946c1a29",
+    "whitelisted": true,
+    "diamondAmount": 1,
+    "goldAmount": 0,
+    "source": "Chill Kong Community"
+  },
+  {
+    "wallet": "0x5691909d541467c53152F3983Ed82f7DfF79bEea",
+    "whitelisted": true,
+    "diamondAmount": 1,
+    "goldAmount": 0,
+    "source": "Chill Kong Community"
+  },
+  {
+    "wallet": "0x45EA4EF1674b38c35EA4db755fd082D111AaFCB9",
+    "whitelisted": true,
+    "diamondAmount": 1,
+    "goldAmount": 0,
+    "source": "Chill Kong Community"
+  },
+  {
+    "wallet": "0xEC35e8f9b86E23E808fD933BFa6AB715F91117De",
+    "whitelisted": true,
+    "diamondAmount": 1,
+    "goldAmount": 0,
+    "source": "CAG Community"
+  },
+  {
+    "wallet": "0xcC1c23D32ba13756679Ba813B8A80Af841A2e41c",
+    "whitelisted": true,
+    "diamondAmount": 1,
+    "goldAmount": 0,
+    "source": "CAG Community"
+  },
+  {
+    "wallet": "0xFfbC7931942101D2e5e5522E11C3d26577557cbB",
+    "whitelisted": true,
+    "diamondAmount": 1,
+    "goldAmount": 0,
+    "source": "CAG Community"
+  },
+  {
+    "wallet": "0x5063Ec7969747D08FFb94E742BB503b788C77633",
+    "whitelisted": true,
+    "diamondAmount": 1,
+    "goldAmount": 1,
+    "source": "CAG Community"
+  },
+  {
+    "wallet": "0xEC92A56492506047f7DE43458F2ecb53F843A859",
+    "whitelisted": true,
+    "diamondAmount": 1,
+    "goldAmount": 0,
+    "source": "CAG Community"
+  },
+  {
+    "wallet": "0x134b7536d5FbB0E42A6ccdDbF74c19336530d503",
+    "whitelisted": true,
+    "diamondAmount": 1,
+    "goldAmount": 1,
+    "source": "Tobbsss.ron Raffle"
+  },
+  {
+    "wallet": "0xE79c3cD14b92C8D64Ec45aB1bA403D570A5FA102",
+    "whitelisted": true,
+    "diamondAmount": 1,
+    "goldAmount": 1,
+    "source": "Tobbsss.ron Raffle"
+  },
+  {
+    "wallet": "0x6AE4AD58c29644B642508fB6272E2c7114661B5f",
+    "whitelisted": true,
+    "diamondAmount": 1,
+    "goldAmount": 0,
+    "source": "Tobbsss.ron Raffle"
+  },
+  {
+    "wallet": "0xD75bef91Fdfb38c96B1Ab2D62232328274442A5c",
+    "whitelisted": true,
+    "diamondAmount": 1,
+    "goldAmount": 1,
+    "source": "Zindel.ron Raffle"
+  },
+  {
+    "wallet": "0xe2b9bE6Ba74AFA0491E2B7D5C106fbcB5CCF8946",
+    "whitelisted": true,
+    "diamondAmount": 1,
+    "goldAmount": 0,
+    "source": "Zindel.ron Raffle"
+  },
+  {
+    "wallet": "0xa206643649ca30F0F756846F09f3C9e3d42E867e",
+    "whitelisted": true,
+    "diamondAmount": 1,
+    "goldAmount": 0,
+    "source": "Zindel.ron Raffle"
+  },
+  {
+    "wallet": "0xD275747B5fb3203021AaE72C73C521d7Ab8e4b12",
+    "whitelisted": true,
+    "diamondAmount": 1,
+    "goldAmount": 0,
+    "source": "Turbo.ron Raffle"
+  },
+  {
+    "wallet": "0x78fe73db371949b562f21D4A886d3050fe430233",
+    "whitelisted": true,
+    "diamondAmount": 1,
+    "goldAmount": 0,
+    "source": "Turbo.ron Raffle"
+  },
+  {
+    "wallet": "0xD63286c1D7B51ACbF9f0af49F7e9EED6eb73CC18",
+    "whitelisted": true,
+    "diamondAmount": 1,
+    "goldAmount": 1,
+    "source": "Turbo.ron Raffle"
+  },
+  {
+    "wallet": "0x97f3daf17eae15ead22eeae4300a64b0186fcda6",
+    "whitelisted": true,
+    "diamondAmount": 1,
+    "goldAmount": 0,
+    "source": "Turbo.ron Raffle"
+  },
+  {
+    "wallet": "0x8C903C95578B648513abc166EdA859E21a1Cf4E5",
+    "whitelisted": true,
+    "diamondAmount": 1,
+    "goldAmount": 0,
+    "source": "Turbo.ron Raffle"
+  },
+  {
+    "wallet": "0x3a6432C0496636620335E124071A7c6B043b1B70",
+    "whitelisted": true,
+    "diamondAmount": 1,
+    "goldAmount": 0,
+    "source": "Over.ron Raffle"
+  },
+  {
+    "wallet": "0x713A8CA99Ee487107a02187B35e2282474f25791",
+    "whitelisted": true,
+    "diamondAmount": 1,
+    "goldAmount": 0,
+    "source": "Over.ron Raffle"
+  },
+  {
+    "wallet": "0x9C5B1965CFa1681134b833de2E9D2a0aaD28a36b",
+    "whitelisted": true,
+    "diamondAmount": 1,
+    "goldAmount": 1,
+    "source": "Over.ron Raffle"
+  },
+  {
+    "wallet": "0x6e41B186445FA2cEBfe754Ec6999BF5D029E1D43",
+    "whitelisted": true,
+    "diamondAmount": 0,
+    "goldAmount": 1,
+    "source": "Mochi Inu Admirals Raffle"
+  },
+  {
+    "wallet": "0x962477203C3DF78c33DAF67236424333c05ec50",
+    "whitelisted": true,
+    "diamondAmount": 0,
+    "goldAmount": 1,
+    "source": "Mochi Inu Admirals Raffle"
+  },
+  {
+    "wallet": "0x5c3c027e7fEBD0A0e549B6423988350065e1c2d9",
+    "whitelisted": true,
+    "diamondAmount": 0,
+    "goldAmount": 1,
+    "source": "Mochi Inu Admirals Raffle"
+  },
+  {
+    "wallet": "0x668d9b0Eff64955db2152c4A17BbeF7e4EE27aF1",
+    "whitelisted": true,
+    "diamondAmount": 0,
+    "goldAmount": 1,
+    "source": "Mochi Inu Admirals Raffle"
+  },
+  {
+    "wallet": "0x42f6B724E37744f20db255C24Ec9c4270f81FeDf",
+    "whitelisted": true,
+    "diamondAmount": 0,
+    "goldAmount": 1,
+    "source": "Chill Kong Team"
+  },
+  {
+    "wallet": "0x1fD754Bc77e72448d1A63E36775df9badb0e2e58",
+    "whitelisted": true,
+    "diamondAmount": 0,
+    "goldAmount": 1,
+    "source": "Chill Kong Team"
+  },
+  {
+    "wallet": "0x7eF2BAFc675c4E382E377005225509b124b466Ba",
+    "whitelisted": true,
+    "diamondAmount": 0,
+    "goldAmount": 1,
+    "source": "Chill Kong Team"
+  },
+  {
+    "wallet": "0x1F48E4654609Ffc8fA6E0AbD50CbD3259a6E5D6F",
+    "whitelisted": true,
+    "diamondAmount": 0,
+    "goldAmount": 1,
+    "source": "Chill Kong Team"
+  },
+  {
+    "wallet": "0x4938b19A548448274E97A6a6cF7B72DE2c0D5dF1",
+    "whitelisted": true,
+    "diamondAmount": 0,
+    "goldAmount": 1,
+    "source": "Chill Kong Team"
+  },
+  {
+    "wallet": "0x30F5032beb3529B3f026AAD87C62F8Fdb1FFEeB0",
+    "whitelisted": true,
+    "diamondAmount": 0,
+    "goldAmount": 1,
+    "source": "Chill Kong Community"
+  },
+  {
+    "wallet": "0x5f9Dd045A593134FC3D5Df5aA27Eb00A100bc34e",
+    "whitelisted": true,
+    "diamondAmount": 0,
+    "goldAmount": 1,
+    "source": "Chill Kong Community"
+  },
+  {
+    "wallet": "0xFA6573fbDe82A52D57b12f98F396ED805a78276E",
+    "whitelisted": true,
+    "diamondAmount": 0,
+    "goldAmount": 1,
+    "source": "Chill Kong Community"
+  },
+  {
+    "wallet": "0x560235B2A10435375118A204779b62784f725Aae",
+    "whitelisted": true,
+    "diamondAmount": 0,
+    "goldAmount": 1,
+    "source": "Chill Kong Community"
+  },
+  {
+    "wallet": "0x7EE9E9361326aF52ED24aafB7614Bb78Bfa7856D",
+    "whitelisted": true,
+    "diamondAmount": 0,
+    "goldAmount": 1,
+    "source": "Chill Kong Community"
+  },
+  {
+    "wallet": "0xB75F8c777Dbaff9270ebCba99F3F140698520c27",
+    "whitelisted": true,
+    "diamondAmount": 0,
+    "goldAmount": 1,
+    "source": "Chill Kong Community"
+  },
+  {
+    "wallet": "0xe182836148020eC25E9d26Ca556CfC996d7fad3D",
+    "whitelisted": true,
+    "diamondAmount": 0,
+    "goldAmount": 1,
+    "source": "Chill Kong Community"
+  },
+  {
+    "wallet": "0x3473Ff346c78F5EB9Dc61b015B328d8Dabd3b073",
+    "whitelisted": true,
+    "diamondAmount": 0,
+    "goldAmount": 1,
+    "source": "Chill Kong Community"
+  },
+  {
+    "wallet": "0xEd426C4Bf84A10b4c27bCEAD9FE2aAD9192372C6",
+    "whitelisted": true,
+    "diamondAmount": 0,
+    "goldAmount": 1,
+    "source": "Chill Kong Community"
+  },
+  {
+    "wallet": "0xBfd227058c64E06A52F86A4c6Bf251CB9D76ed29",
+    "whitelisted": true,
+    "diamondAmount": 0,
+    "goldAmount": 1,
+    "source": "Chill Kong Community"
+  },
+  {
+    "wallet": "0xDCd8363f43469d174F63e5aaBcB94362fDe90F2f",
+    "whitelisted": true,
+    "diamondAmount": 0,
+    "goldAmount": 1,
+    "source": "Chill Kong Community"
+  },
+  {
+    "wallet": "0x521aFaf3Cad2BdEBda2603FfE25EBC0e199aBA0a",
+    "whitelisted": true,
+    "diamondAmount": 0,
+    "goldAmount": 1,
+    "source": "Chill Kong Community"
+  },
+  {
+    "wallet": "0xE19375bA8A053e5Fc0af73F5c1b192cA823E5Fe3",
+    "whitelisted": true,
+    "diamondAmount": 0,
+    "goldAmount": 1,
+    "source": "Chill Kong Community"
+  },
+  {
+    "wallet": "0xa60f0Ae1459165B9bd95F1a6B00090E2B96B9b54",
+    "whitelisted": true,
+    "diamondAmount": 0,
+    "goldAmount": 1,
+    "source": "Chill Kong Community"
+  },
+  {
+    "wallet": "0x029a198a3E5fc1f3aE526F9DEa6a3b90a4da6Bd5",
+    "whitelisted": true,
+    "diamondAmount": 0,
+    "goldAmount": 1,
+    "source": "CAG Community"
+  },
+  {
+    "wallet": "0x30017c5303B300eeF85d2B2459b3F281877798d4",
+    "whitelisted": true,
+    "diamondAmount": 0,
+    "goldAmount": 1,
+    "source": "CAG Community"
+  },
+  {
+    "wallet": "0x0072643e1aeA4a6733dE53DB8553bF9095D8308A",
+    "whitelisted": true,
+    "diamondAmount": 0,
+    "goldAmount": 1,
+    "source": "CAG Community"
+  },
+  {
+    "wallet": "0xAB0FE77738b823ff30b3ca02CD8ad32fd0AD6682",
+    "whitelisted": true,
+    "diamondAmount": 0,
+    "goldAmount": 1,
+    "source": "CAG Community"
+  },
+  {
+    "wallet": "0xaAdBeDd7D1eb20558bD08349ED437A7a39277085",
+    "whitelisted": true,
+    "diamondAmount": 0,
+    "goldAmount": 2,
+    "source": "CAG Community"
+  },
+  {
+    "wallet": "0x1e6C3cf81391f73cA47AC1E1B12266a95C612561",
+    "whitelisted": true,
+    "diamondAmount": 0,
+    "goldAmount": 1,
+    "source": "CAG Community"
+  },
+  {
+    "wallet": "0xd69fD97D7b84F7b88e7c3a058a47258813D9F301",
+    "whitelisted": true,
+    "diamondAmount": 0,
+    "goldAmount": 2,
+    "source": "CAG Community"
+  },
+  {
+    "wallet": "0xf784f1f2186446b48df53de8d9900a360ac562ae",
+    "whitelisted": true,
+    "diamondAmount": 0,
+    "goldAmount": 2,
+    "source": "CAG Community"
+  },
+  {
+    "wallet": "0x2Cc9722E6F32D85BA7dc98b208f357328B6F7cBE",
+    "whitelisted": true,
+    "diamondAmount": 0,
+    "goldAmount": 1,
+    "source": "CAG Community"
+  },
+  {
+    "wallet": "0x1CE0eF1A3dBFE7bb6D8C27574753eE818E5ECCd7",
+    "whitelisted": true,
+    "diamondAmount": 0,
+    "goldAmount": 1,
+    "source": "Tobbsss.ron Raffle"
+  },
+  {
+    "wallet": "0x012F968531Af57188410339f656DCA35026E99af",
+    "whitelisted": true,
+    "diamondAmount": 0,
+    "goldAmount": 1,
+    "source": "Zindel.ron Raffle"
+  },
+  {
+    "wallet": "0xb94b15976020eA076fe80764358aF66F992c7Fce",
+    "whitelisted": true,
+    "diamondAmount": 0,
+    "goldAmount": 2,
+    "source": "Zindel.ron Raffle"
+  },
+  {
+    "wallet": "0x97DA63a5cC73A0372ddc10a6C78e3C5f583793e1",
+    "whitelisted": true,
+    "diamondAmount": 0,
+    "goldAmount": 1,
+    "source": "Over.ron Raffle"
+  },
+  {
+    "wallet": "0xfF870ACB568612DE076608336aE44E0Eb63B7618",
+    "whitelisted": true,
+    "diamondAmount": 0,
+    "goldAmount": 1,
+    "source": "Over.ron Raffle"
+  }
+]

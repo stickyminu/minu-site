@@ -2,5 +2,6 @@
   functions = "netlify/functions"
 
 [functions]
-included_files = ["whitelist.json"]
+  included_files = ["whitelist.json"]
+
 

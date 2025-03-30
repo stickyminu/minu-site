@@ -12,7 +12,7 @@
     const whitelistAPI = "https://mochi-inu-admirals.netlify.app/data/whitelist.json"; // Update with actual API URL
 
     const minuTokenAddress = "0xfa4384cbac92141bc47b8600db5f3805a33645d2"; // $MINU Token Address
-    const mochiInuWallet = "0x0632921b0eb918758959238760cF556a8163ab20"; // Receiver Wallet
+    const mochiInuWallet = "0x19dB82b42924FB2Dc8096f1805287BFc426db0F0"; // Receiver Wallet
 
     const minuAmountDiamond = "9999999000000000000000000"; // 9,999,999 $MINU (18 decimals)
     const minuAmountGold = "4999999000000000000000000"; // 4,999,999 $MINU (18 decimals)

@@ -1,6 +1,6 @@
 ﻿document.addEventListener("DOMContentLoaded", async () => {
-    const connectButton = document.getElementById("connectButton");
-    const walletDisplay = document.getElementById("walletDisplay");
+    const connectWalletButton = document.getElementById("connectWallet"); // Updated ID
+    const walletInfo = document.getElementById("walletInfo"); // Updated ID
     const statusMessage = document.getElementById("statusMessage");
     const mintDiamondButton = document.getElementById("mintDiamondButton");
     const mintGoldButton = document.getElementById("mintGoldButton");
@@ -10,8 +10,8 @@
 
     async function checkWalletConnection() {
         if (!window.ronin || !window.ronin.provider) {
-            statusMessage.innerText = "❌ Ronin Wallet not detected! Please install it.";
-            connectButton.disabled = true;
+            if (statusMessage) statusMessage.innerText = "❌ Ronin Wallet not detected! Please install it.";
+            connectWalletButton.disabled = true;
             return;
         }
 
@@ -23,19 +23,20 @@
             }
         } catch (error) {
             console.error("Wallet connection error:", error);
-            statusMessage.innerText = "❌ Failed to check wallet connection.";
+            if (statusMessage) statusMessage.innerText = "❌ Failed to check wallet connection.";
         }
     }
 
     function updateWalletDisplay(address) {
         const shortAddress = `${address.slice(0, 4)}...${address.slice(-4)}`;
-        walletDisplay.innerHTML = `<a href="my-account.html">${shortAddress}</a>`;
-        connectButton.style.display = "none";
+        walletInfo.innerHTML = `<a href="my-account.html">${shortAddress}</a>`;
+        connectWalletButton.style.display = "none"; // Hide Connect Wallet button
+        walletInfo.style.display = "inline"; // Show wallet info
     }
 
     async function checkWhitelistStatus(address) {
         try {
-            statusMessage.innerText = "🔍 Checking whitelist status...";
+            if (statusMessage) statusMessage.innerText = "🔍 Checking whitelist status...";
             const response = await fetch(`${whitelistAPI}?wallet=${address}`);
             const data = await response.json();
 
@@ -55,23 +56,24 @@
             }
         } catch (error) {
             console.error("Error fetching whitelist status:", error);
-            statusMessage.innerText = "❌ Failed to load whitelist status.";
+            if (statusMessage) statusMessage.innerText = "❌ Failed to load whitelist status.";
         }
     }
 
-    if (connectButton) {
-        connectButton.addEventListener("click", async () => {
+    if (connectWalletButton) {
+        connectWalletButton.addEventListener("click", async () => {
+            console.log("🔗 Connect Wallet button clicked.");
             try {
                 const accounts = await window.ronin.provider.request({ method: "eth_requestAccounts" });
                 updateWalletDisplay(accounts[0]);
                 checkWhitelistStatus(accounts[0]);
             } catch (error) {
                 console.error("Connection error:", error);
-                statusMessage.innerText = "❌ Wallet connection failed.";
+                if (statusMessage) statusMessage.innerText = "❌ Wallet connection failed.";
             }
         });
     } else {
-        console.error("❌ Connect button not found in HTML.");
+        console.error("❌ Connect Wallet button not found in HTML.");
     }
 
     checkWalletConnection();

@@ -107,6 +107,10 @@ header {
     width: 100%;
     max-width: 350px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centers content horizontally */
+    justify-content: center; /* Centers content vertically if needed */
 }
 
     .voucher-container img {
@@ -115,6 +119,10 @@ header {
         max-height: 250px;
         object-fit: contain;
         border-radius: 10px;
+    }
+    .voucher-container button {
+        display: block;
+        margin: 10px auto; /* Centers button horizontally */
     }
 
 /* Buttons */
@@ -127,7 +135,7 @@ button {
     cursor: pointer;
     border-radius: 8px;
     transition: all 0.3s ease;
-    margin-top: 10px;
+    margin: 10px;
     width: 100%;
     max-width: 250px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);

@@ -3,3 +3,8 @@
 
 [functions]
   included_files = ["data/whitelist.json"]
+
+[[headers]]
+for = "/data/whitelist.json"
+[headers.values]
+Access-Control-Allow-Origin = "*"

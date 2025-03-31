@@ -66,13 +66,15 @@ header {
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
 }
 
-/* Container Wrapper */
-.container-wrapper {
+/* Main Container */
+.main-container {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 /* Whitelist Container */
@@ -81,33 +83,37 @@ header {
     padding: 20px;
     border-radius: 10px;
     text-align: center;
-    width: 60%;
+    width: 80%;
+    max-width: 600px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
     margin-bottom: 20px;
 }
 
-/* Voucher Containers */
-.voucher-container {
+/* Voucher Section */
+.voucher-section {
     display: flex;
     justify-content: center;
     gap: 20px;
-    width: auto;
-    margin-top: 20px;
+    width: 100%;
+    max-width: 800px;
+    flex-wrap: wrap;
 }
 
-.voucher {
+.voucher-container {
     background: rgba(255, 255, 255, 0.1);
     padding: 20px;
     border-radius: 10px;
     text-align: center;
+    width: 100%;
+    max-width: 350px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
-    flex: 1;
-    max-width: 400px;
 }
 
-    .voucher img {
+    .voucher-container img {
         width: 100%;
         height: auto;
+        max-height: 250px;
+        object-fit: contain;
         border-radius: 10px;
     }
 
@@ -121,9 +127,10 @@ button {
     cursor: pointer;
     border-radius: 8px;
     transition: all 0.3s ease;
-    margin: 10px 0px 0px 0px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    margin-top: 10px;
     width: 100%;
+    max-width: 250px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
 }
 
     button:hover {
@@ -133,10 +140,23 @@ button {
 
 /* Footer */
 footer {
-    position: fixed;
+    position: relative;
     bottom: 0;
     width: 100%;
     background: rgba(0, 86, 179, 0.8);
     padding: 10px;
     font-size: 14px;
+    text-align: center;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .voucher-section {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .whitelist-info {
+        width: 90%;
+    }
 }

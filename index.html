@@ -19,31 +19,31 @@
     </nav>
 
     <!-- Main Content -->
-    <div class="container">
-        <!-- Container 1: Whitelist Status -->
-        <div id="whitelist-status" class="whitelist-container">
-            <p>Checking whitelist status...</p>
-        </div>
-        <div id="allocation" class="whitelist-container" style="display: none;">
-            <p>Congratulations! You have been whitelisted for this Presale.</p>
-        </div>
-        <div id="not-whitelisted" class="whitelist-container" style="display: none;">
-            <p>Welcome! Our whitelisted spots are already allocated.</p>
-            <p>Should there be vouchers left, you can join the FCFS Public Sale tomorrow, April 1, 2025, 6:00 PM GMT+8.</p>
+    <div class="main-container">
+        <div class="rounded-box">
+            <!-- Container 1: Whitelist Status -->
+            <div id="whitelist-status">
+                <p>Checking whitelist status...</p>
+            </div>
+            <div id="allocation" style="display: none;">
+                <p>Congratulations! You have been whitelisted for this Presale.</p>
+                <p>Diamond Voucher: <span id="diamondAmount">0</span></p>
+                <p>Gold Voucher: <span id="goldAmount">0</span></p>
+                <p>Source: <span id="whitelistSource"></span></p>
+            </div>
+            <div id="not-whitelisted" style="display: none;">
+                <p>Welcome! Our whitelisted spots are already allocated.</p>
+                <p>Should there be vouchers left, you can join the FCFS Public Sale tomorrow, April 1, 2025, 6:00 PM GMT+8.</p>
+            </div>
         </div>
 
-        <!-- Containers 2 and 3: Voucher Minting -->
+        <!-- Container 2 & 3: Voucher Images and Mint Buttons -->
         <div class="voucher-container">
-            <!-- Container 2: Diamond Voucher -->
             <div class="voucher-box">
-                <h3>Diamond Voucher</h3>
                 <img src="https://yellow-gentle-mongoose-869.mypinata.cloud/ipfs/bafkreig6sfrxo4a6f4ppg6zvkjxx2qmdsntekrufuapnxtl7vqggeeb5b4" alt="Diamond Voucher" class="voucher-image">
                 <button id="mintDiamond" style="display: none;">Mint Diamond Voucher</button>
             </div>
-
-            <!-- Container 3: Gold Voucher -->
             <div class="voucher-box">
-                <h3>Gold Voucher</h3>
                 <img src="https://yellow-gentle-mongoose-869.mypinata.cloud/ipfs/bafkreie72qd2ccdtmiilbyr3ua3eifu5xa7w3ewwfnsfffjigozxnezlpq" alt="Gold Voucher" class="voucher-image">
                 <button id="mintGold" style="display: none;">Mint Gold Voucher</button>
             </div>

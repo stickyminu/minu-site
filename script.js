@@ -8,14 +8,15 @@
     const mintGoldButton = document.getElementById("mintGold");
     const diamondAmountDisplay = document.getElementById("diamondAmount");
     const goldAmountDisplay = document.getElementById("goldAmount");
+    const whitelistSourceDisplay = document.getElementById("whitelistSource");
 
-    const whitelistAPI = "https://mochi-inu-admirals.netlify.app/data/whitelist.json"; // Update with actual API URL
+    const whitelistAPI = "https://mochi-inu-admirals.netlify.app/data/whitelist.json";
 
-    const minuTokenAddress = "0xfa4384cbac92141bc47b8600db5f3805a33645d2"; // $MINU Token Address
-    const mochiInuWallet = "0x19dB82b42924FB2Dc8096f1805287BFc426db0F0"; // Receiver Wallet
+    const minuTokenAddress = "0xfa4384cbac92141bc47b8600db5f3805a33645d2";
+    const mochiInuWallet = "0x19dB82b42924FB2Dc8096f1805287BFc426db0F0";
 
-    const minuAmountDiamond = "9999999000000000000000000"; // 9,999,999 $MINU (18 decimals)
-    const minuAmountGold = "4999999000000000000000000"; // 4,999,999 $MINU (18 decimals)
+    const minuAmountDiamond = "9999999000000000000000000";
+    const minuAmountGold = "4999999000000000000000000";
 
     async function checkWalletConnection() {
         if (!window.ronin || !window.ronin.provider) {
@@ -60,6 +61,7 @@
 
                 diamondAmountDisplay.innerText = whitelistEntry.diamondAmount;
                 goldAmountDisplay.innerText = whitelistEntry.goldAmount;
+                whitelistSourceDisplay.innerText = whitelistEntry.source || "N/A";
 
                 if (whitelistEntry.diamondAmount > 0) mintDiamondButton.style.display = "block";
                 if (whitelistEntry.goldAmount > 0) mintGoldButton.style.display = "block";
@@ -86,7 +88,6 @@
             const provider = new ethers.providers.Web3Provider(window.ronin.provider);
             const signer = provider.getSigner();
 
-            // $MINU Token Contract ABI (Approval + Transfer)
             const minuABI = [
                 "function approve(address spender, uint256 amount) public returns (bool)",
                 "function transfer(address to, uint256 amount) public returns (bool)"
@@ -94,13 +95,11 @@
 
             const minuContract = new ethers.Contract(minuTokenAddress, minuABI, signer);
 
-            // Step 1: Approve spending
             console.log("🔄 Approving $MINU tokens...");
             const approveTx = await minuContract.approve(mochiInuWallet, amount);
             await approveTx.wait();
             console.log("✅ Approval confirmed!");
 
-            // Step 2: Transfer tokens to Mochi Inu Wallet
             console.log("🔄 Transferring tokens...");
             const transferTx = await minuContract.transfer(mochiInuWallet, amount);
             await transferTx.wait();

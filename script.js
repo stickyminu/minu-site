@@ -67,6 +67,7 @@
                 if (whitelistEntry.goldAmount > 0) mintGoldButton.style.display = "block";
             } else {
                 whitelistStatus.style.display = "none";
+                voucherContainer.style.display = "none";
                 notWhitelistedSection.style.display = "block";
             }
         } catch (error) {

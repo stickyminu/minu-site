@@ -96,6 +96,7 @@
     }
 
     async function mintVoucher(amount) {
+        const statusText = document.getElementById("textStatus");
         if (!window.ronin || !window.ronin.provider) {
             alert("❌ Ronin Wallet not detected! Please install it.");
             return;

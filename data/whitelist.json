@@ -143,7 +143,7 @@
         "wallet": "0x0225F21d70607BdBEa19e9DE7Cb0308E606633D0",
         "whitelisted": true,
         "diamondAmount": 2,
-        "goldAmount": 0,
+        "goldAmount": 2,
         "source": "OG Supporters and Holders"
     },
     {
@@ -157,7 +157,7 @@
         "wallet": "0x12C42863d7D2B0e339afDB0B97613116b8FE7318",
         "whitelisted": true,
         "diamondAmount": 2,
-        "goldAmount": 0,
+        "goldAmount": 1,
         "source": "OG Supporters and Holders"
     },
     {
@@ -199,7 +199,7 @@
         "wallet": "0xe8354fEd697388D215EfBc49df9639E14761Bb34",
         "whitelisted": true,
         "diamondAmount": 2,
-        "goldAmount": 0,
+        "goldAmount": 2,
         "source": "OG Supporters and Holders"
     },
     {
@@ -618,7 +618,7 @@
     {
         "wallet": "0x7423c70AAFd922EC64bb77422Fb2E29A3415873B",
         "whitelisted": true,
-        "diamondAmount": 0,
+        "diamondAmount": 2,
         "goldAmount": 2,
         "source": "OG Supporters and Holders"
     },
@@ -761,5 +761,12 @@
         "diamondAmount": 1,
         "goldAmount": 1,
         "source": "Admin"
+    },
+    {
+        "wallet": "0x05EA462187c1a23eE657d48511BCA29eD3012f85",
+        "whitelisted": true,
+        "diamondAmount": 0,
+        "goldAmount": 1,
+        "source": "OG Supporters and Holders"
     }
 ]

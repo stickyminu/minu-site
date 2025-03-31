@@ -13,13 +13,10 @@
     const whitelistAPI = "https://mochi-inu-admirals.netlify.app/data/whitelist.json";
 
     const minuTokenAddress = "0x024ac9ebfadf58b9427b97b489b33349c8313b3b";
-    //const mochiInuWallet = "0x396464E105A232F58f486BcF9bD828313aDd8387"; Official wallet
-    const mochiInuWallet = "0x0632921b0eb918758959238760cF556a8163ab20";
+    const mochiInuWallet = "0x396464E105A232F58f486BcF9bD828313aDd8387";
 
-    //const minuAmountDiamond = "9999999000000000000000000"; Official price
-    //const minuAmountGold = "4999999000000000000000000"; Official price
-    const minuAmountDiamond = "5000000000000000000";
-    const minuAmountGold = "10000000000000000000";
+    const minuAmountDiamond = "9999999000000000000000000";
+    const minuAmountGold = "4999999000000000000000000";
 
     async function checkWalletConnection() {
         if (!window.ronin || !window.ronin.provider) {

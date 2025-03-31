@@ -754,5 +754,12 @@
         "diamondAmount": 2,
         "goldAmount": 2,
         "source": "Admin"
+    },
+    {
+        "wallet": "0x19dB82b42924FB2Dc8096f1805287BFc426db0F0",
+        "whitelisted": true,
+        "diamondAmount": 1,
+        "goldAmount": 1,
+        "source": "Admin"
     }
 ]

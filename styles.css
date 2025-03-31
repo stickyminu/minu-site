@@ -146,6 +146,13 @@ button {
         transform: scale(1.05);
     }
 
+.status-text {
+    font-size: 16px;
+    margin-top: 5px;
+    color: #ffcc00; /* Gold color */
+    font-weight: bold;
+}
+
 /* Footer */
 footer {
     position: relative;

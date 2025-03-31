@@ -18,21 +18,35 @@
         </div>
     </nav>
 
-    <!-- Minting Section -->
+    <!-- Main Content -->
     <div class="container">
-        <div id="whitelist-status">
+        <!-- Container 1: Whitelist Status -->
+        <div id="whitelist-status" class="whitelist-container">
             <p>Checking whitelist status...</p>
         </div>
-        <div id="allocation" style="display: none;">
+        <div id="allocation" class="whitelist-container" style="display: none;">
             <p>Congratulations! You have been whitelisted for this Presale.</p>
-            <p>Diamond Voucher: <span id="diamondAmount">0</span></p>
-            <p>Gold Voucher: <span id="goldAmount">0</span></p>
-            <button id="mintDiamond" style="display: none;">Mint Diamond Voucher</button>
-            <button id="mintGold" style="display: none;">Mint Gold Voucher</button>
         </div>
-        <div id="not-whitelisted" style="display: none;">
+        <div id="not-whitelisted" class="whitelist-container" style="display: none;">
             <p>Welcome! Our whitelisted spots are already allocated.</p>
             <p>Should there be vouchers left, you can join the FCFS Public Sale tomorrow, April 1, 2025, 6:00 PM GMT+8.</p>
+        </div>
+
+        <!-- Containers 2 and 3: Voucher Minting -->
+        <div class="voucher-container">
+            <!-- Container 2: Diamond Voucher -->
+            <div class="voucher-box">
+                <h3>Diamond Voucher</h3>
+                <img src="diamond-voucher.png" alt="Diamond Voucher" class="voucher-image">
+                <button id="mintDiamond" style="display: none;">Mint Diamond Voucher</button>
+            </div>
+
+            <!-- Container 3: Gold Voucher -->
+            <div class="voucher-box">
+                <h3>Gold Voucher</h3>
+                <img src="gold-voucher.png" alt="Gold Voucher" class="voucher-image">
+                <button id="mintGold" style="display: none;">Mint Gold Voucher</button>
+            </div>
         </div>
     </div>
 

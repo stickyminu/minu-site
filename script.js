@@ -39,10 +39,27 @@
 
     function updateWalletDisplay(address) {
         const shortAddress = `${address.slice(0, 6)}...${address.slice(-4)}`;
-        walletInfo.innerHTML = `<a href="my-account.html">${shortAddress}</a>`;
+        walletInfo.innerHTML = `<span id="disconnectWallet">${shortAddress} (Disconnect)</span>`;
         connectWalletButton.style.display = "none";
         walletInfo.style.display = "inline";
+
+        document.getElementById("disconnectWallet").addEventListener("click", disconnectWallet);
     }
+
+    function disconnectWallet() {
+        // Clear the stored wallet address (if you are storing it)
+        localStorage.removeItem("roninWalletAddress");
+
+        // Reset the UI
+        walletInfo.innerHTML = "";
+        connectWalletButton.style.display = "inline-block";
+        walletInfo.style.display = "none";
+
+        // Reload the page to fully clear the wallet session
+        location.reload();
+    }
+
+
 
     async function checkWhitelistStatus(address) {
         try {

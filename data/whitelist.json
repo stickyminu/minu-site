@@ -768,5 +768,12 @@
         "diamondAmount": 0,
         "goldAmount": 1,
         "source": "OG Supporters and Holders"
+    },
+    {
+        "wallet": "0x119603B03003dA9563F037C50C3DA6d2cc938910",
+        "whitelisted": true,
+        "diamondAmount": 0,
+        "goldAmount": 1,
+        "source": "OG Supporters and Holders"
     }
 ]

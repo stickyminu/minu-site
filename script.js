@@ -63,34 +63,27 @@
 
     async function checkWhitelistStatus(address) {
         try {
-            whitelistStatus.innerHTML = "<p>🔍 Checking whitelist status...</p>";
+            whitelistStatus.innerHTML = "<p>✅ Public sale is live. No whitelist required!</p>";
 
-            const response = await fetch(whitelistAPI);
-            if (!response.ok) throw new Error("Failed to fetch whitelist data.");
+            // Hide whitelist-related UI
+            whitelistStatus.style.display = "none";
+            allocationSection.style.display = "block";
 
-            const data = await response.json();
-            const normalizedAddress = address.toLowerCase();
-            const whitelistEntry = data.find(entry => entry.wallet.toLowerCase() === normalizedAddress);
+            // Set unlimited allocation
+            diamondAmountDisplay.innerText = "Unlimited";
+            goldAmountDisplay.innerText = "Unlimited";
+            whitelistSourceDisplay.innerText = "Public Sale";
 
-            if (whitelistEntry && whitelistEntry.whitelisted) {
-                whitelistStatus.style.display = "none";
-                allocationSection.style.display = "block";
+            // Always show mint buttons
+            mintDiamondButton.style.display = "block";
+            mintGoldButton.style.display = "block";
 
-                diamondAmountDisplay.innerText = whitelistEntry.diamondAmount;
-                goldAmountDisplay.innerText = whitelistEntry.goldAmount;
-                whitelistSourceDisplay.innerText = whitelistEntry.source || "N/A";
-
-                if (whitelistEntry.diamondAmount > 0) mintDiamondButton.style.display = "block";
-                if (whitelistEntry.goldAmount > 0) mintGoldButton.style.display = "block";
-            } else {
-                whitelistStatus.style.display = "none";
-                notWhitelistedSection.style.display = "block";
-            }
         } catch (error) {
-            console.error("Error fetching whitelist status:", error);
-            whitelistStatus.innerHTML = "<p>❌ Failed to load whitelist status.</p>";
+            console.error("Error checking whitelist status:", error);
+            whitelistStatus.innerHTML = "<p>❌ Failed to check status.</p>";
         }
     }
+
 
     async function mintVoucher(amount) {
         const statusText = document.getElementById("textStatus");
